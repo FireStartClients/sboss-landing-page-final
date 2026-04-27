@@ -1,8 +1,38 @@
-# React + Vite
+# SBOS — Small Business Operating System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The official landing page for SBOS, built with **Next.js 14 App Router** and deployed on Vercel.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Framework:** Next.js 14 (App Router)
+- **Styling:** Tailwind CSS v3 with custom design tokens
+- **Animations:** GSAP + ScrollTrigger
+- **Icons:** Lucide React
+- **Fonts:** Sora, Inter, IBM Plex Mono, Instrument Serif (Google Fonts)
+- **Deployment:** Vercel
+
+## Pages
+
+| Route | Page |
+|-------|------|
+| `/` | Landing Page |
+| `/about` | About Us |
+| `/pricing` | Pricing |
+| `/signup` | Request Access |
+| `/contact` | Contact |
+
+## Local Development
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Build
+
+```bash
+npm run build
+npm run start
+```
