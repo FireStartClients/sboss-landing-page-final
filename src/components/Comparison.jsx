@@ -211,11 +211,11 @@ const Comparison = () => {
                             {idx === TOTAL_CARDS - 1 && (
                                 <div className="bg-sbos-cloud/40 border-t border-sbos-electric/10 px-8 py-5 flex items-center justify-center">
                                     <a
-                                        href="#demo"
-                                        className="inline-flex items-center gap-2 bg-white border border-sbos-royal/20 hover:border-sbos-electric text-sbos-navy px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-sbos-electric/10 group"
+                                        href="/signup"
+                                        className="inline-flex items-center gap-2 bg-sbos-royal hover:bg-sbos-electric text-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-sbos-electric/25 group"
                                     >
-                                        See it in action
-                                        <ArrowRight size={16} className="text-sbos-electric group-hover:translate-x-1 transition-transform" />
+                                        Get Started Today
+                                        <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                                     </a>
                                 </div>
                             )}

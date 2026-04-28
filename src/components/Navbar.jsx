@@ -159,6 +159,7 @@ const Navbar = () => {
 
     const navLinks = [
         { name: 'About', href: '/about', isRoute: true },
+        { name: 'Blog', href: '/blog', isRoute: true },
         { name: 'Pricing', href: '/pricing', isRoute: true },
         { name: 'Contact', href: '/contact', isRoute: true },
         { name: 'Security', href: '#security' },

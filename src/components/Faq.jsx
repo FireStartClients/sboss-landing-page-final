@@ -8,28 +8,28 @@ gsap.registerPlugin(ScrollTrigger);
 
 const faqData = [
     {
-        q: 'Is this a real product or just a concept demo?',
-        a: 'SBOS is a live operating system. This specific demo environment uses sample data so you can experience the workflow instantly, but the underlying engines (health scoring, SOP generation, etc.) are the exact same tools used in production.',
+        q: 'What exactly is SBOS and how does it work?',
+        a: 'SBOS is a Business Operating System — a single platform that connects your diagnostic, planning, processes, financials, and pipeline in one place. You run a Business Health Scan, connect your existing tools (QuickBooks, Stripe, Calendly, etc.), and SBOS tells you exactly where your business is leaking money or time — then gives you a structured plan to fix it.',
     },
     {
-        q: 'Do I need to connect my tools to try the demo?',
-        a: 'No. The demo runs entirely on pre-loaded sample business data. You don\u2019t need to authenticate any external accounts, upload CSVs, or provide API keys to see how it works.',
-    },
-    {
-        q: 'Can I use my own business data later?',
-        a: 'Yes. Once you complete a guided walkthrough and choose to deploy SBOS for your company, we securely integrate with your existing tech stack (CRM, accounting, project management) to provide live telemetry.',
+        q: 'What do I get on the free Starter plan?',
+        a: 'The Starter plan gives you full access to the SOP Builder — you can create, assign, and track standard operating procedures for your team immediately. You can also explore all five platform modules to see what SBOS can do before upgrading. No credit card required.',
     },
     {
         q: 'Does SBOS replace my CRM or accounting software?',
-        a: 'No. SBOS is an orchestration layer. It sits on top of your existing tools to find leaks and enforce process. We believe in letting specialized tools (like QuickBooks or HubSpot) do what they do best, while SBOS acts as the ultimate command center.',
+        a: 'No. SBOS is an orchestration layer that sits on top of your existing stack. It reads what your tools (QuickBooks, HubSpot, Stripe, Calendly) are doing and surfaces the gaps, waste, and process breakdowns you can\'t see from inside each individual tool. We believe in letting specialized tools do what they do best — while SBOS acts as the command center.',
     },
     {
-        q: 'Can the SOP outputs be customized to my specific industry?',
-        a: 'Absolutely. The templates generated in the demo are foundational. In production, the system learns your specific operational terminology and adapts the procedures to fit whether you run a plumbing business, a digital agency, or a consulting firm.',
+        q: 'How long does it take to get set up?',
+        a: 'The Business Health Scan takes under 10 minutes. Connecting your first integration takes another 5 minutes. Most Operator plan users have their first SOP documented and their 30/60/90-day roadmap live within their first session. There\'s no lengthy onboarding or migration — you start from where you are.',
     },
     {
-        q: 'What happens after I finish the demo?',
-        a: 'You\u2019ll have a clear understanding of what a \u201CBusiness Operating System\u201D actually looks like. From there, the next step is to book a 1-on-1 walkthrough where we look at how easily SBOS can map to your specific current reality.',
+        q: 'Can SBOS work for my specific industry?',
+        a: 'Yes. SBOS is built for service-based businesses — contractors, agencies, consultants, healthcare practices, cleaners, coaches, and more. The SOP Builder adapts to your operational terminology, the diagnostic asks industry-relevant questions, and the growth roadmap is structured around your specific constraints — not a one-size-fits-all playbook.',
+    },
+    {
+        q: 'What\'s the difference between Operator ($150/mo) and Executive ($550/mo)?',
+        a: 'The Operator plan gives you the full platform — all 5 modules, live integrations, automated summaries, and your growth roadmap. The Executive plan adds the human element: dedicated advisory sessions with the SBOS team, a human-reviewed weekly business summary, and direct founder access for strategic guidance. It\'s the platform plus a real advisor in your corner.',
     },
 ];
 

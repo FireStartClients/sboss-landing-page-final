@@ -66,8 +66,11 @@ const FitCheck = () => {
             <div className="max-w-4xl mx-auto px-6">
 
                 <div className="text-center mb-16 fit-elem">
+                    <span className="inline-block text-xs font-mono font-semibold text-sbos-electric uppercase tracking-widest mb-4 bg-sbos-electric/5 px-4 py-1.5 rounded-full border border-sbos-electric/10">
+                        Fit Check
+                    </span>
                     <h2 className="text-4xl font-heading font-bold text-sbos-navy mb-4">Is SBOS a good fit for your business?</h2>
-                    <p className="text-xl text-sbos-slate">60 seconds to know if this demo is worth your time.</p>
+                    <p className="text-xl text-sbos-slate">60 seconds to know if this is right for you.</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-5 gap-12 bg-white rounded-[2.5rem] p-8 md:p-12 shadow-xl shadow-sbos-navy/5 border border-sbos-electric/10 fit-elem">

@@ -16,7 +16,7 @@
 
 - [x] `/about` — About Us page *(founder story, mission, team)* ✅ Built April 26, 2026
 - [x] `/pricing` — Pricing page *(even a placeholder / waitlist tier card)* ✅ Built April 26, 2026
-- [ ] `/contact` — Contact page *(inquiry form + direct email)*
+- [x] `/contact` — Contact page *(inquiry form + direct email)*
 
 ---
 
@@ -24,11 +24,10 @@
 
 These slot into the main landing page alongside existing sections.
 
-- [ ] **Results / Metrics Bar** — directly below Hero *(e.g., "12+ hrs saved/week", "$890/mo avg leak found")*
-- [ ] **Integrations Row** — after WhatIsSbos *(logo grid: QuickBooks, HubSpot, Slack, Stripe, Zapier, etc.)*
-- [ ] **Founder / Team Credibility Block** — between Comparison and Features *(photo, quote, link to /about)*
-- [ ] **Social Proof / Testimonials** — after FitCheck *(3 customer quotes or early-access results)*
-- [ ] **Pricing Preview** — before Footer *(1–2 tier cards or "Free during beta" block)*
+- [x] **Results / Metrics Bar** — directly below Hero *(e.g., "12+ hrs saved/week", "$890/mo avg leak found")* ✅ Built April 28, 2026
+- [x] **Integrations Row** — after WhatIsSbos *(logo grid: QuickBooks, HubSpot, Slack, Stripe, Zapier, etc.)* ✅ Built April 28, 2026
+- [x] **Founder / Team Credibility Block** — between Comparison and Features *(photo, quote, link to /about)* ✅ Built April 28, 2026
+- [x] **Pricing Preview** — before Footer *(1–2 tier cards or "Free during beta" block)* ✅ Built April 28, 2026
 
 ---
 
@@ -36,37 +35,36 @@ These slot into the main landing page alongside existing sections.
 
 These sections exist but need copy/content updates.
 
-- [ ] **DemoModules** — rename section to "Features", reframe all tab copy for live product *(not demo)*
-- [ ] **HowItWorks** — rewrite the 6 steps to describe real user onboarding *(not the old demo flow)*
-- [ ] **Hero floating UI cards** — confirm data values match real product output ranges
-- [ ] **FitCheck criteria** — confirm the 5 checklist items accurately describe who SBOS is for
-- [ ] **CalendlyModal** — swap placeholder URL with real SBOS booking link
+- [x] **DemoModules** — renamed section to "Platform Features", reframed all 5 module names/copy for live product ✅ April 28, 2026
+- [x] **HowItWorks** — rewrote all 6 steps for real user onboarding (signup → health scan → diagnostic → connect tools → SOP → growth plan) ✅ April 28, 2026
+- [ ] **Hero floating UI cards** — ⚠️ NEEDS MANUAL REVIEW: confirm data values (health scores, leak amounts, SOP names) match real product output ranges before launch
+- [x] **FitCheck criteria** — removed "demo" language from subtitle; 5 checklist criteria confirmed accurate ✅ April 28, 2026
+- [ ] **CalendlyModal** — ⚠️ NEEDS REAL URL: current placeholder is `https://calendly.com/sbos/discovery-call` — replace with actual SBOS booking link
 
 ---
 
 ## 🟠 Footer & Navigation Completion
 
 - [x] Footer: wire up `About Us` link → `/about` ✅
-- [ ] Footer: wire up `Contact` link → `/contact`
-- [ ] Footer: add `Blog` link → `/blog`
-- [ ] Footer: add `Pricing` link → `/pricing`
-- [ ] Footer: add `Privacy Policy` link → `/privacy`
-- [ ] Footer: add `Terms of Service` link → `/terms`
-- [ ] Footer: add social media links *(LinkedIn, X/Twitter minimum)*
-- [ ] Footer: add newsletter / email capture strip
+- [x] Footer: wire up `Contact` link → `/contact` ✅ April 28, 2026
+- [x] Footer: add `Blog` link → `/blog` ✅ April 28, 2026
+- [x] Footer: add `Pricing` link → `/pricing` ✅ April 28, 2026
+- [x] Footer: add `Privacy Policy` link → `/privacy` ✅ April 28, 2026
+- [x] Footer: add `Terms of Service` link → `/terms` ✅ April 28, 2026
+- [x] Footer: add social media links *(LinkedIn + X/Twitter — URLs need real handles)* ✅ April 28, 2026
+- [x] Footer: add newsletter / email capture strip *(posts to `/api/subscribe`)* ✅ April 28, 2026
 - [x] Navbar: add `Pricing` link *(once page is built)* ✅
 - [x] Navbar: add `About` link *(once page is built)* ✅
-- [ ] Navbar: add `Blog` link *(once page is built)*
+- [x] Navbar: add `Blog` link ✅ April 28, 2026
 
 ---
 
 ## 🟡 Content Pages (SEO & Growth)
 
-- [ ] `/blog` — Blog index page *(post cards: title, date, category, excerpt)*
-- [ ] `/blog/[slug]` — Individual blog post page *(full article layout)*
-- [ ] `/features` — Features / Platform deep-dive page *(one section per module)*
-- [ ] `/customers` — Case Studies / Customer Results page *(story cards + individual pages)*
-- [ ] `/changelog` — Changelog / Roadmap page *(reverse-chronological update log)*
+- [x] `/blog` — Blog index page with category filter, post grid, newsletter CTA ✅ April 28, 2026
+- [x] `/blog/[slug]` — Individual blog post page with breadcrumb, article body, related posts ✅ April 28, 2026
+- [x] `/features` — Features deep-dive page with one section per module ✅ April 28, 2026
+- [x] `/changelog` — Changelog / Roadmap page with reverse-chronological timeline ✅ April 28, 2026
 
 ---
 

@@ -21,50 +21,50 @@ const moduleData = [
         id: 'health',
         title: 'Business Health Diagnostic',
         icon: Activity,
-        does: 'Analyzes your current operational footprint to establish a baseline score.',
-        inputs: ['Basic revenue range', 'Number of current software tools', 'Primary operational bottleneck'],
-        outputs: ['Overall Health Score (0-100)', 'Risk categorization matrix', 'Top 3 immediate priority fixes'],
-        matters: 'You can’t fix what you haven’t measured. This gives you an honest look at where your business operations are fragile.',
+        does: 'Runs a structured analysis of your operations and produces a scored snapshot of where your business stands — across revenue, systems, team, and process.',
+        inputs: ['Revenue range & growth stage', 'Current software tools in use', 'Biggest operational bottleneck right now'],
+        outputs: ['Operational Health Score (0–100)', 'Risk categorization across 5 dimensions', 'Top 3 priority fixes with rationale'],
+        matters: 'You can\'t fix what you haven\'t measured. The diagnostic gives you an honest, scored baseline — so you know exactly where to start, not just where it hurts.',
         previewIcon: BarChart,
     },
     {
         id: 'leaks',
-        title: 'Money Leak Finder',
+        title: 'AI Money Leak Detection',
         icon: AlertTriangle,
-        does: 'Scans your tech stack and payroll inefficiencies to find wasted spend.',
-        inputs: ['Current software subscriptions', 'Overlapping tool categories', 'Hours spent on manual data entry'],
-        outputs: ['Total monthly waste estimate', 'Duplication flags', 'Consolidation recommendations'],
-        matters: 'Most small businesses bleed 15-20% of their margin on unused or duplicative tools and manual labor that could be automated.',
+        does: 'Scans your connected tools, subscriptions, and workflows to surface wasted spend and margin erosion hiding in your day-to-day operations.',
+        inputs: ['Connected integrations (QuickBooks, Stripe, etc.)', 'Software subscriptions list', 'Manual process hours per week'],
+        outputs: ['Total estimated monthly waste', 'Duplication and overlap flags', 'Consolidation & cancellation recommendations'],
+        matters: 'Most $1M–$5M service businesses leak 10–20% of margin to duplicative tools, manual data entry, and unbilled time. SBOS makes those leaks visible in minutes.',
         previewIcon: Database,
     },
     {
         id: 'growth',
-        title: 'Growth Plan Generator',
+        title: 'Growth Roadmap (30/60/90)',
         icon: TrendingUp,
-        does: 'Transforms your scattered goals into a structured 3-phase execution roadmap.',
-        inputs: ['Primary 90-day objective', 'Current biggest constraint', 'Available team capacity'],
-        outputs: ['30-day "quick win" tasks', '60-day system builds', '90-day scaling milestones'],
-        matters: 'Moving from reactive chaos to proactive execution requires a chronological plan, not just a to-do list.',
+        does: 'Converts your goals and constraints into a phased, prioritized execution plan — structured as 30-day wins, 60-day systems, and 90-day milestones.',
+        inputs: ['Primary 90-day objective', 'Current biggest growth constraint', 'Available team capacity'],
+        outputs: ['30-day quick-win action list', '60-day system-build priorities', '90-day scaling milestones'],
+        matters: 'Most operators know what they want — they don\'t have a sequenced plan to get there. SBOS turns goals into a clear, ordered execution track.',
         previewIcon: Target,
     },
     {
         id: 'sop',
         title: 'SOP Builder',
         icon: FileText,
-        does: 'Generates standardized operating procedures for your most critical workflows.',
-        inputs: ['Process name/Goal', 'Key steps currently taken', 'Common errors to avoid'],
-        outputs: ['Formatted SOP document', 'Quick-reference checklist', 'Training guide framework'],
-        matters: 'If a process only lives in your head, you don’t own a business—you own a job. SOPs make your business sellable and scalable.',
+        does: 'Creates structured Standard Operating Procedures for your critical workflows — assign them to team members, track completion, and iterate over time.',
+        inputs: ['Process name and goal', 'Current steps your team takes', 'Common failure points to avoid'],
+        outputs: ['Formatted SOP document', 'Step-by-step checklist', 'Role assignments & accountability layer'],
+        matters: 'If a process lives only in someone\'s head, your business can\'t grow or be sold. SOPs turn tribal knowledge into transferable systems.',
         previewIcon: CheckSquare,
     },
     {
-        id: 'automation',
-        title: 'Lead Follow-Up',
+        id: 'pipeline',
+        title: 'Customer & Lead Pipeline',
         icon: ArrowRightCircle,
-        does: 'Designs a starter automation sequence to ensure no lead falls through the cracks.',
-        inputs: ['Primary lead source', 'Desired response time', 'Follow-up timeline logic'],
-        outputs: ['Visual follow-up sequence map', 'Draft text/email templates', 'Automation readiness checklist'],
-        matters: 'Speed to lead is everything in local service. A guaranteed follow-up sequence instantly increases conversion rates without extra work.',
+        does: 'Tracks every lead and client through a structured pipeline — from first contact to closed deal to repeat business — with built-in follow-up automation.',
+        inputs: ['Primary lead sources', 'Current follow-up process (or lack of one)', 'Average sales cycle length'],
+        outputs: ['Visual lead pipeline by stage', 'Automated follow-up sequence', 'Conversion rate visibility'],
+        matters: 'Speed to lead is everything in service businesses. A consistent, automated follow-up system increases close rates without adding manual work to your plate.',
         previewIcon: Workflow,
     }
 ];
@@ -114,12 +114,15 @@ const DemoModules = () => {
     const activeModule = moduleData[activeTab];
 
     return (
-        <section ref={sectionRef} id="demo" className="py-24 bg-white relative">
+        <section ref={sectionRef} id="platform" className="py-24 bg-white relative">
             <div className="max-w-6xl mx-auto px-6">
 
                 <div className="text-center max-w-2xl mx-auto mb-16">
-                    <h2 className="text-4xl font-heading font-bold text-sbos-navy mb-4">Inside the SBOS Demo</h2>
-                    <p className="text-lg text-sbos-slate font-body">Explore the 5 integrated modules that take you from scattered operations to a clear execution system.</p>
+                    <span className="inline-block text-xs font-mono font-semibold text-sbos-electric uppercase tracking-widest mb-4 bg-sbos-electric/5 px-4 py-1.5 rounded-full border border-sbos-electric/10">
+                        Platform Features
+                    </span>
+                    <h2 className="text-4xl font-heading font-bold text-sbos-navy mb-4">Five modules.{' '}<span className="font-accent italic font-normal text-sbos-royal">One operating system.</span></h2>
+                    <p className="text-lg text-sbos-slate font-body">SBOS gives you the diagnostic, the plan, the processes, and the pipeline — all connected, all in one place.</p>
                 </div>
 
                 {/* Desktop Layout: Tabs + Content Panel */}
