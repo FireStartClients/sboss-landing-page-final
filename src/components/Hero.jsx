@@ -90,9 +90,16 @@ const Hero = () => {
 
                     {/* CTAs */}
                     <div className="flex flex-wrap items-center gap-4 mt-4">
-                        <button onClick={() => router.push('/signup')} className="bg-sbos-royal hover:bg-sbos-electric text-white px-8 py-3.5 rounded-full text-base font-semibold transition-all duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-[1.03] hover:shadow-xl hover:-translate-y-1 hover:shadow-sbos-electric/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-sbos-electric focus-visible:ring-offset-2">
-                            Get Started Free
-                        </button>
+                        <div className="relative inline-flex">
+                            {/* Pulsing glow ring */}
+                            <div className="absolute inset-0 rounded-full bg-sbos-electric/40 animate-ping" />
+                            <button
+                                onClick={() => router.push('/signup')}
+                                className="relative bg-sbos-royal hover:bg-sbos-electric text-white px-8 py-3.5 rounded-full text-base font-semibold transition-all duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-[1.03] hover:shadow-xl hover:-translate-y-1 hover:shadow-sbos-electric/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-sbos-electric focus-visible:ring-offset-2"
+                            >
+                                Get Started Free
+                            </button>
+                        </div>
                         <a href="#how-it-works" className="flex items-center gap-2 group bg-white border border-sbos-slate/20 hover:border-sbos-electric text-sbos-navy px-8 py-3.5 rounded-full text-base font-semibold transition-all duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:shadow-sm hover:scale-[1.03]">
                             <PlayCircle size={20} className="text-sbos-royal group-hover:text-sbos-electric transition-colors" />
                             See How It Works
