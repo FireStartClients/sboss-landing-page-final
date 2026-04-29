@@ -58,9 +58,9 @@ const Faq = () => {
                 scrollTrigger: {
                     trigger: pinContainerRef.current,
                     start: 'top top',
-                    end: `+=${(TOTAL_CARDS - 1) * 120}vh`,
+                    end: `+=${(TOTAL_CARDS - 1) * 200}vh`,
                     pin: true,
-                    scrub: 1.2,
+                    scrub: 2.5,
                     anticipatePin: 1,
                 },
             });
