@@ -5,12 +5,13 @@ import { useRouter } from 'next/navigation';
 import {
   ArrowLeft, ArrowRight, CheckCircle2, XCircle, Minus,
   Zap, Shield, Users, BarChart3, FileText, MessageSquare,
-  Star, ChevronDown, ChevronUp
+  Star, ChevronDown, ChevronUp, RefreshCw
 } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import ToolCostComparison from '../components/ToolCostComparison';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,6 +51,7 @@ const TIERS = [
       { text: 'Customer & Lead Pipeline', included: true },
       { text: 'Business Health Diagnostic', included: true },
       { text: 'Weekly Business Summary', included: true },
+      { text: 'New features added continuously — your plan grows with the platform', included: true, evergreen: true },
       { text: 'Human advisory & strategy sessions', included: false },
       { text: 'Priority onboarding & founder access', included: false },
     ],
@@ -72,6 +74,7 @@ const TIERS = [
       { text: 'Customer & Lead Pipeline', included: true },
       { text: 'Business Health Diagnostic', included: true },
       { text: 'Weekly Business Summary with human analysis', included: true },
+      { text: 'All new features included as they\'re released — forever', included: true, evergreen: true },
       { text: 'Human advisory & strategy sessions', included: true },
       { text: 'Priority onboarding & founder access', included: true },
     ],
@@ -233,16 +236,20 @@ const PricingPage = () => {
 
                   {/* Feature list */}
                   <ul className="space-y-3 mb-8 flex-1">
-                    {tier.features.map(({ text, included }) => (
+                    {tier.features.map(({ text, included, evergreen }) => (
                       <li key={text} className="flex items-start gap-3">
                         {included
-                          ? <CheckCircle2 size={16} className="text-sbos-success flex-shrink-0 mt-0.5" />
+                          ? evergreen
+                            ? <RefreshCw size={15} className={`flex-shrink-0 mt-0.5 ${tier.dark ? 'text-sbos-electric' : 'text-sbos-royal'}`} />
+                            : <CheckCircle2 size={16} className="text-sbos-success flex-shrink-0 mt-0.5" />
                           : <Minus size={16} className={`flex-shrink-0 mt-0.5 ${tier.dark ? 'text-white/20' : 'text-sbos-slate/25'}`} />
                         }
                         <span className={`text-sm font-body leading-snug ${
                           !included
                             ? tier.dark ? 'text-white/30' : 'text-sbos-slate/40'
-                            : tier.dark ? 'text-sbos-ice/90' : 'text-sbos-slate'
+                            : evergreen
+                              ? tier.dark ? 'text-sbos-electric font-semibold' : 'text-sbos-royal font-semibold'
+                              : tier.dark ? 'text-sbos-ice/90' : 'text-sbos-slate'
                         }`}>{text}</span>
                       </li>
                     ))}
@@ -266,9 +273,16 @@ const PricingPage = () => {
               </div>
             ))}
           </div>
-          <p className="text-center text-xs font-mono text-sbos-slate/60 mt-8 uppercase tracking-wider">
-            All plans include access to the SBOS platform · Cancel anytime
-          </p>
+          <div className="mt-8 flex flex-col items-center gap-3">
+            <div className="inline-flex items-center gap-2 bg-sbos-electric/5 border border-sbos-electric/15 px-5 py-2.5 rounded-full">
+              <RefreshCw size={13} className="text-sbos-electric" />
+              <span className="text-xs font-mono font-semibold text-sbos-electric uppercase tracking-wider">Continuously Evolving Platform</span>
+              <span className="text-xs font-mono text-sbos-slate/70">— We ship new features regularly. Operator &amp; Executive members get every update, at no extra cost.</span>
+            </div>
+            <p className="text-center text-xs font-mono text-sbos-slate/60 uppercase tracking-wider">
+              All plans include access to the SBOS platform · Cancel anytime
+            </p>
+          </div>
         </div>
       </section>
 
@@ -311,6 +325,9 @@ const PricingPage = () => {
           </div>
         </div>
       </section>
+
+      {/* TOOL COST COMPARISON */}
+      <ToolCostComparison />
 
       {/* FAQ */}
       <section ref={faqRef} className="py-20 bg-sbos-cloud bg-blueprint-grid">

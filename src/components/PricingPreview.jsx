@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { CheckCircle2, Minus, ArrowRight, Star } from 'lucide-react';
+import { CheckCircle2, Minus, ArrowRight, Star, RefreshCw } from 'lucide-react';
 
 // Pulled directly from PricingPage.jsx TIERS data
 const starterFeatures = [
@@ -136,8 +136,17 @@ const PricingPreview = () => {
                     </a>
                 </div>
 
+                {/* Ever-Evolving callout */}
+                <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <div className="inline-flex items-center gap-2 rounded-full px-4 py-2" style={{ backgroundColor: 'rgba(51,102,255,0.06)', border: '1px solid rgba(51,102,255,0.15)' }}>
+                        <RefreshCw size={12} style={{ color: '#3366FF' }} />
+                        <span className="text-xs font-mono font-semibold uppercase tracking-wider" style={{ color: '#3366FF' }}>Continuously Evolving Platform</span>
+                        <span className="hidden sm:inline text-xs font-mono" style={{ color: 'rgba(94,107,138,0.7)' }}>— We ship new features regularly. Operator &amp; Executive members get every update included.</span>
+                    </div>
+                </div>
+
                 {/* Bottom note */}
-                <p className="text-center text-xs font-mono mt-8" style={{ color: 'rgba(94,107,138,0.6)' }}>
+                <p className="text-center text-xs font-mono mt-4" style={{ color: 'rgba(94,107,138,0.6)' }}>
                     All plans include access to the SBOS platform · Cancel anytime ·{' '}
                     <a href="/pricing" className="hover:underline" style={{ color: '#3366FF' }}>View full pricing comparison →</a>
                 </p>

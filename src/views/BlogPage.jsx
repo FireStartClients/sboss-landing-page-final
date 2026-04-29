@@ -1,23 +1,23 @@
-'use client';
-import React, { useState } from 'react';
-import Link from 'next/link';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import { ArrowRight, Clock, Tag } from 'lucide-react';
-import { posts, categories } from '../data/blog-posts';
+'use client'
+import React, { useState } from 'react'
+import Link from 'next/link'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+import { ArrowRight, Clock, Tag } from 'lucide-react'
 
 const categoryColors = {
     Operations: 'bg-blue-50 text-blue-700 border-blue-200',
-    Finance: 'bg-emerald-50 text-emerald-700 border-emerald-200',
-    Growth: 'bg-violet-50 text-violet-700 border-violet-200',
-};
+    Finance:    'bg-emerald-50 text-emerald-700 border-emerald-200',
+    Growth:     'bg-violet-50 text-violet-700 border-violet-200',
+}
 
-export default function BlogPage() {
-    const [activeCategory, setActiveCategory] = useState('All');
+// posts + categories are passed from the server component (blog/page.jsx)
+export default function BlogPage({ posts = [], categories = ['All'] }) {
+    const [activeCategory, setActiveCategory] = useState('All')
 
     const filtered = activeCategory === 'All'
         ? posts
-        : posts.filter(p => p.category === activeCategory);
+        : posts.filter(p => p.category === activeCategory)
 
     return (
         <div className="min-h-screen bg-sbos-cloud overflow-x-hidden">
@@ -68,49 +68,51 @@ export default function BlogPage() {
             {/* Post Grid */}
             <section className="py-16 bg-sbos-cloud">
                 <div className="max-w-5xl mx-auto px-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {filtered.map((post, idx) => (
-                            <article
-                                key={post.slug}
-                                className={`group bg-white rounded-3xl border border-sbos-electric/10 shadow-sm hover:shadow-xl hover:shadow-sbos-navy/8 hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col ${idx === 0 ? 'md:col-span-2' : ''}`}
-                            >
-                                {idx === 0 && (
-                                    <div className="h-1.5 w-full bg-gradient-to-r from-sbos-royal via-sbos-electric to-sbos-royal" />
-                                )}
-                                <div className="p-8 flex flex-col flex-1">
-                                    <div className="flex items-center gap-3 mb-4">
-                                        <span className={`text-xs font-mono font-semibold px-2.5 py-0.5 rounded-full border ${categoryColors[post.category] || 'bg-sbos-ice text-sbos-navy border-sbos-royal/20'}`}>
-                                            {post.category}
-                                        </span>
-                                        <span className="flex items-center gap-1 text-xs font-mono text-sbos-slate/60">
-                                            <Clock size={11} /> {post.readTime}
-                                        </span>
-                                    </div>
-                                    <h2 className={`font-heading font-bold text-sbos-navy mb-3 leading-snug group-hover:text-sbos-royal transition-colors ${idx === 0 ? 'text-2xl md:text-3xl' : 'text-xl'}`}>
-                                        {post.title}
-                                    </h2>
-                                    <p className="text-sbos-slate font-body leading-relaxed mb-6 flex-1">
-                                        {post.excerpt}
-                                    </p>
-                                    <div className="flex items-center justify-between mt-auto pt-4 border-t border-sbos-electric/8">
-                                        <span className="text-xs font-mono text-sbos-slate/50">
-                                            {new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
-                                        </span>
-                                        <Link
-                                            href={`/blog/${post.slug}`}
-                                            className="inline-flex items-center gap-1.5 text-sm font-semibold text-sbos-royal hover:text-sbos-electric transition-colors group-hover:gap-2.5"
-                                        >
-                                            Read article <ArrowRight size={14} />
-                                        </Link>
-                                    </div>
-                                </div>
-                            </article>
-                        ))}
-                    </div>
-
-                    {filtered.length === 0 && (
+                    {filtered.length === 0 ? (
                         <div className="text-center py-20 text-sbos-slate font-body">
-                            No posts in this category yet.
+                            {posts.length === 0
+                                ? 'Blog posts are on their way. Check back soon!'
+                                : 'No posts in this category yet.'}
+                        </div>
+                    ) : (
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            {filtered.map((post, idx) => (
+                                <article
+                                    key={post.slug}
+                                    className={`group bg-white rounded-3xl border border-sbos-electric/10 shadow-sm hover:shadow-xl hover:shadow-sbos-navy/8 hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col ${idx === 0 ? 'md:col-span-2' : ''}`}
+                                >
+                                    {idx === 0 && (
+                                        <div className="h-1.5 w-full bg-gradient-to-r from-sbos-royal via-sbos-electric to-sbos-royal" />
+                                    )}
+                                    <div className="p-8 flex flex-col flex-1">
+                                        <div className="flex items-center gap-3 mb-4">
+                                            <span className={`text-xs font-mono font-semibold px-2.5 py-0.5 rounded-full border ${categoryColors[post.category] || 'bg-sbos-ice text-sbos-navy border-sbos-royal/20'}`}>
+                                                {post.category}
+                                            </span>
+                                            <span className="flex items-center gap-1 text-xs font-mono text-sbos-slate/60">
+                                                <Clock size={11} /> {post.readTime}
+                                            </span>
+                                        </div>
+                                        <h2 className={`font-heading font-bold text-sbos-navy mb-3 leading-snug group-hover:text-sbos-royal transition-colors ${idx === 0 ? 'text-2xl md:text-3xl' : 'text-xl'}`}>
+                                            {post.title}
+                                        </h2>
+                                        <p className="text-sbos-slate font-body leading-relaxed mb-6 flex-1">
+                                            {post.excerpt}
+                                        </p>
+                                        <div className="flex items-center justify-between mt-auto pt-4 border-t border-sbos-electric/8">
+                                            <span className="text-xs font-mono text-sbos-slate/50">
+                                                {post.date ? new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : ''}
+                                            </span>
+                                            <Link
+                                                href={`/blog/${post.slug}`}
+                                                className="inline-flex items-center gap-1.5 text-sm font-semibold text-sbos-royal hover:text-sbos-electric transition-colors group-hover:gap-2.5"
+                                            >
+                                                Read article <ArrowRight size={14} />
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </article>
+                            ))}
                         </div>
                     )}
                 </div>
@@ -125,10 +127,7 @@ export default function BlogPage() {
                     <p className="text-sbos-slate font-body mb-8">
                         Weekly operational insights for service business owners. No fluff.
                     </p>
-                    <form
-                        onSubmit={e => e.preventDefault()}
-                        className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-                    >
+                    <form onSubmit={e => e.preventDefault()} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
                         <input
                             type="email"
                             placeholder="your@email.com"
@@ -147,5 +146,5 @@ export default function BlogPage() {
 
             <Footer />
         </div>
-    );
+    )
 }

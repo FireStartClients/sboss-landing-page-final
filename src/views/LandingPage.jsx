@@ -10,6 +10,8 @@ import DemoModules from '../components/DemoModules';
 import FitCheck from '../components/FitCheck';
 import HowItWorks from '../components/HowItWorks';
 import Security from '../components/Security';
+import MeetTheTeam from '../components/MeetTheTeam';
+import SocialProofHumans from '../components/SocialProofHumans';
 import Faq from '../components/Faq';
 import PricingPreview from '../components/PricingPreview';
 import Footer from '../components/Footer';
@@ -22,6 +24,7 @@ const LandingPage = () => {
             <main className="min-h-screen bg-sbos-cloud text-sbos-ink relative bg-blueprint-grid overflow-x-hidden">
                 <Hero />
                 <WhatIsSbos />
+                <SocialProofHumans />
                 <IntegrationsRow />
                 <Comparison />
                 <MetricsBar />
@@ -29,6 +32,7 @@ const LandingPage = () => {
                 <FitCheck />
                 <HowItWorks />
                 <Security />
+                <MeetTheTeam />
                 <Faq />
                 <PricingPreview />
             </main>

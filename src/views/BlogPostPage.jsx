@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { ArrowLeft, Clock, Tag, ArrowRight } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { posts } from '../data/blog-posts';
 
 const categoryColors = {
     Operations: 'bg-blue-50 text-blue-700 border-blue-200',
@@ -27,9 +26,9 @@ function renderBody(body) {
     }).filter(Boolean);
 }
 
-export default function BlogPostPage({ slug }) {
-    const post = posts.find(p => p.slug === slug);
-    const related = posts.filter(p => p.slug !== slug && p.category === post?.category).slice(0, 2);
+export default function BlogPostPage({ post }) {
+    // related posts not available without the full list — omit for now
+    const related = []
 
     if (!post) {
         return (

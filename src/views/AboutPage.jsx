@@ -322,6 +322,48 @@ const AboutPage = () => {
       </section>
 
 
+      {/* ── DEVELOPMENT PARTNER ─────────────────────────────────────────────── */}
+      <section className="py-20 bg-sbos-navy relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-sbos-electric/10 rounded-full blur-[100px] pointer-events-none" />
+        <div className="max-w-5xl mx-auto px-6 relative z-10">
+
+          <div className="text-center mb-12">
+            <span className="inline-block text-xs font-mono font-semibold text-sbos-electric uppercase tracking-widest bg-sbos-electric/10 border border-sbos-electric/20 px-4 py-1.5 rounded-full mb-6">
+              Engineering Partner
+            </span>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-5 leading-tight">
+              Built and maintained by a{' '}
+              <span className="font-accent italic font-normal text-sbos-electric">premium development team.</span>
+            </h2>
+            <p className="text-sbos-ice/70 font-body text-base max-w-2xl mx-auto leading-relaxed">
+              SBOS is engineered and continuously improved by <span className="text-white font-semibold">FireStart</span> — an AI automation and development agency specializing in building intelligent business platforms. Their expertise ensures the platform stays ahead of what small businesses need, not just what technology can do today.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            {[
+              { label: 'AI & Automation', body: 'Every intelligent feature in SBOS — from diagnostics to money leak detection — is built on production-grade AI architecture.' },
+              { label: 'Continuous Delivery', body: 'The platform ships new features regularly. Operator and Executive members receive every improvement as it\'s released, at no additional cost.' },
+              { label: 'Enterprise-Grade Quality', body: 'Built with the same engineering standards used for enterprise software — applied specifically to the needs of local service businesses.' },
+            ].map(({ label, body }) => (
+              <div key={label} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/8 hover:border-sbos-electric/30 transition-all duration-300">
+                <h3 className="text-sm font-mono font-bold text-sbos-electric uppercase tracking-wider mb-3">{label}</h3>
+                <p className="text-sbos-ice/70 font-body text-sm leading-relaxed">{body}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 flex justify-center">
+            <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-2xl px-7 py-4">
+              <div className="w-2 h-2 rounded-full bg-sbos-success animate-pulse" />
+              <span className="text-sm font-mono text-sbos-ice/80">
+                Actively developed — new features shipping continuously
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </section>
 
       <Footer />
     </div>
