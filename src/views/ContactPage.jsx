@@ -9,8 +9,7 @@ import Footer from '../components/Footer';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// ── Swap this URL for your real Calendly / Cal.com link ─────────────────────
-const CALENDAR_URL = 'https://calendly.com/YOUR_LINK_HERE';
+const CALENDAR_URL = 'https://calendly.com/ccmgagency/discovery-meeting-clone-1';
 // ────────────────────────────────────────────────────────────────────────────
 
 const REASONS = [

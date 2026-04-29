@@ -4,8 +4,7 @@ import { createPortal } from 'react-dom';
 import gsap from 'gsap';
 import { X } from 'lucide-react';
 
-// TODO: Replace this URL with the correct SBOS Calendly booking link before going live
-const CALENDLY_URL = 'https://calendly.com/sbos/discovery-call';
+const CALENDLY_URL = 'https://calendly.com/ccmgagency/discovery-meeting-clone-1';
 
 const CalendlyModal = ({ isOpen, onClose }) => {
     const backdropRef = useRef(null);
