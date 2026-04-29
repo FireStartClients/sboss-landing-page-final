@@ -8,44 +8,7 @@ const CALENDLY_URL = 'https://calendly.com/ccmgagency/discovery-meeting-clone-1'
 
 const CalendlyModal = ({ isOpen, onClose }) => {
     const backdropRef = useRef(null);
-    const panelRef = useRef(null);
-    const widgetContainerRef = useRef(null);
-    const initializedRef = useRef(false);
-
-    // Initialize the Calendly widget programmatically once the modal opens
-    useEffect(() => {
-        if (!isOpen || !widgetContainerRef.current) {
-            initializedRef.current = false;
-            return;
-        }
-
-        // Clear any previous widget content
-        widgetContainerRef.current.innerHTML = '';
-        initializedRef.current = false;
-
-        const tryInit = () => {
-            if (
-                window.Calendly &&
-                widgetContainerRef.current &&
-                !initializedRef.current
-            ) {
-                initializedRef.current = true;
-                window.Calendly.initInlineWidget({
-                    url: CALENDLY_URL,
-                    parentElement: widgetContainerRef.current,
-                });
-            }
-        };
-
-        tryInit();
-        if (!initializedRef.current) {
-            const interval = setInterval(() => {
-                tryInit();
-                if (initializedRef.current) clearInterval(interval);
-            }, 200);
-            return () => clearInterval(interval);
-        }
-    }, [isOpen]);
+    const panelRef    = useRef(null);
 
     // Animate in + body scroll lock
     useEffect(() => {
@@ -63,24 +26,19 @@ const CalendlyModal = ({ isOpen, onClose }) => {
             document.body.style.overflow = '';
         }
 
-        return () => {
-            document.body.style.overflow = '';
-        };
+        return () => { document.body.style.overflow = ''; };
     }, [isOpen]);
 
     // Close on Escape
     useEffect(() => {
         if (!isOpen) return;
-        const handleKey = (e) => {
-            if (e.key === 'Escape') onClose();
-        };
+        const handleKey = (e) => { if (e.key === 'Escape') onClose(); };
         window.addEventListener('keydown', handleKey);
         return () => window.removeEventListener('keydown', handleKey);
     }, [isOpen, onClose]);
 
     if (!isOpen) return null;
 
-    // Portal to document.body so the modal is never clipped by parent overflow/positioning
     return createPortal(
         <div
             ref={backdropRef}
@@ -112,10 +70,14 @@ const CalendlyModal = ({ isOpen, onClose }) => {
                     </button>
                 </div>
 
-                {/* Calendly Widget Container */}
-                <div
-                    ref={widgetContainerRef}
-                    style={{ minWidth: '320px', height: '660px' }}
+                {/* Calendly iframe — most reliable embed method, no external script needed */}
+                <iframe
+                    src={CALENDLY_URL}
+                    width="100%"
+                    height="660"
+                    frameBorder="0"
+                    title="Schedule a discovery call"
+                    style={{ display: 'block', border: 'none' }}
                 />
             </div>
         </div>,
