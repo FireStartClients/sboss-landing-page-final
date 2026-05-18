@@ -77,7 +77,7 @@ const IntegrationsRow = () => {
                     <p className="text-sm text-sbos-slate/70 font-body mb-3">
                         + dozens more via Zapier and native API connections
                     </p>
-                    <a href="https://app.sbos.tech" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm font-semibold text-sbos-electric hover:text-sbos-royal transition-colors group">
+                    <a href="https://app.sbos.tech" className="inline-flex items-center gap-1.5 text-sm font-semibold text-sbos-electric hover:text-sbos-royal transition-colors group">
                         See all integrations
                         <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                     </a>

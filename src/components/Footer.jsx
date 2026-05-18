@@ -64,8 +64,8 @@ const Footer = () => {
                         <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto justify-center">
                             <a
                                 href="https://app.sbos.tech"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                               
+                               
                                 className="w-full sm:w-auto bg-sbos-royal hover:bg-sbos-electric text-white px-10 py-4 rounded-full text-base font-semibold transition-all duration-300 hover:scale-[1.03] hover:shadow-lg hover:shadow-sbos-electric/25"
                             >
                                 Get Started Free
@@ -190,7 +190,7 @@ const Footer = () => {
                         <div>
                             <h4 className="text-white font-semibold mb-4 text-sm tracking-wider">Get Started</h4>
                             <ul className="space-y-3">
-                                <li><a href="https://app.sbos.tech" target="_blank" rel="noopener noreferrer" className="text-sbos-slate hover:text-white text-sm transition-colors">Create Free Account</a></li>
+                                <li><a href="https://app.sbos.tech" className="text-sbos-slate hover:text-white text-sm transition-colors">Create Free Account</a></li>
                                 <li><Link href="/pricing" className="text-sbos-slate hover:text-white text-sm transition-colors">View Pricing</Link></li>
                                 <li><Link href="/privacy" className="text-sbos-slate hover:text-white text-sm transition-colors">Privacy Policy</Link></li>
                                 <li><Link href="/terms" className="text-sbos-slate hover:text-white text-sm transition-colors">Terms of Service</Link></li>

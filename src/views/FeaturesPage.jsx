@@ -58,7 +58,7 @@ export default function FeaturesPage() {
                     <p className="text-xl text-sbos-slate font-body leading-relaxed max-w-2xl mx-auto mb-10">
                         Every module in SBOS is connected. Your diagnostic feeds your roadmap. Your roadmap informs your SOPs. Your pipeline integrates with your follow-up.
                     </p>
-                    <a href="https://app.sbos.tech" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-sbos-royal hover:bg-sbos-electric text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-all duration-300 hover:scale-[1.02] group">
+                    <a href="https://app.sbos.tech" className="inline-flex items-center gap-2 bg-sbos-royal hover:bg-sbos-electric text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-all duration-300 hover:scale-[1.02] group">
                         Get Started Free <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
                     </a>
                 </div>
@@ -120,7 +120,7 @@ export default function FeaturesPage() {
                     <h2 className="text-4xl font-heading font-bold text-white mb-5">All five modules. <span className="font-accent italic font-normal text-sbos-electric">Starting at $0.</span></h2>
                     <p className="text-sbos-ice/70 font-body text-lg mb-8">Start free with the SOP Builder. Unlock the full operating system on Operator for $150/month.</p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="https://app.sbos.tech" target="_blank" rel="noopener noreferrer" className="bg-sbos-electric hover:bg-sbos-royal text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-all duration-300 hover:scale-[1.02]">Get Started Free</a>
+                        <a href="https://app.sbos.tech" className="bg-sbos-electric hover:bg-sbos-royal text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-all duration-300 hover:scale-[1.02]">Get Started Free</a>
                         <Link href="/pricing" className="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-all duration-300">View Pricing</Link>
                     </div>
                 </div>

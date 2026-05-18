@@ -119,8 +119,8 @@ export default function BlogPostPage({ post }) {
                             </p>
                             <a
                                 href="https://app.sbos.tech"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                               
+                               
                                 className="inline-flex items-center gap-2 bg-white hover:bg-sbos-ice text-sbos-navy font-semibold px-8 py-3.5 rounded-full text-sm transition-all duration-300 hover:scale-[1.02] group"
                             >
                                 Get Started Free <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />

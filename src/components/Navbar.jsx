@@ -247,7 +247,7 @@ const Navbar = () => {
                     >
                         Take Fit Check
                     </a>
-                    <a href="https://app.sbos.tech" target="_blank" rel="noopener noreferrer" className="bg-sbos-royal hover:bg-sbos-electric text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-[1.03] hover:shadow-lg hover:shadow-sbos-electric/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-sbos-electric focus-visible:ring-offset-2">
+                    <a href="https://app.sbos.tech" className="bg-sbos-royal hover:bg-sbos-electric text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-[1.03] hover:shadow-lg hover:shadow-sbos-electric/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-sbos-electric focus-visible:ring-offset-2">
                         Get Started
                     </a>
                 </div>
@@ -292,7 +292,7 @@ const Navbar = () => {
                 >
                     Take Fit Check
                 </a>
-                <a href="https://app.sbos.tech" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="w-full bg-sbos-royal hover:bg-sbos-electric text-white px-6 py-3 mt-2 rounded-xl text-base font-semibold transition-transform duration-300 active:scale-95 block text-center">
+                <a href="https://app.sbos.tech" onClick={() => setMobileMenuOpen(false)} className="w-full bg-sbos-royal hover:bg-sbos-electric text-white px-6 py-3 mt-2 rounded-xl text-base font-semibold transition-transform duration-300 active:scale-95 block text-center">
                     Get Started
                 </a>
             </div>

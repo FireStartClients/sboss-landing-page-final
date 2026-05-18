@@ -131,8 +131,8 @@ const MetricsBar = () => {
                     </p>
                     <a
                         href="https://app.sbos.tech"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                       
+                       
                         className="inline-flex items-center gap-2 bg-sbos-royal hover:bg-sbos-electric text-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-[1.03] hover:shadow-lg hover:shadow-sbos-electric/25 shrink-0 group"
                     >
                         Run Your Diagnostic

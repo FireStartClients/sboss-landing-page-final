@@ -88,8 +88,8 @@ const SocialProofHumans = () => {
           </div>
           <a
             href="https://app.sbos.tech"
-            target="_blank"
-            rel="noopener noreferrer"
+           
+           
             className="flex items-center gap-2 text-sm font-semibold bg-sbos-royal hover:bg-sbos-electric text-white px-6 py-3 rounded-full transition-all duration-300 whitespace-nowrap group shrink-0"
           >
             Get Started Free <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />

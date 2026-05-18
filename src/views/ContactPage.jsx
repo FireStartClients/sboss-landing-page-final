@@ -65,8 +65,8 @@ const ContactPage = () => {
             <div className="absolute inset-0 rounded-full bg-sbos-electric/10 animate-ping" style={{ animationDuration: '2.2s', animationDelay: '0.9s' }} />
             <a
               href={CALENDAR_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+             
+             
               className="relative inline-flex items-center gap-3 bg-sbos-royal hover:bg-sbos-electric text-white px-10 py-4 rounded-full text-base font-semibold transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-sbos-electric/25 group"
             >
               <Calendar size={18} />
