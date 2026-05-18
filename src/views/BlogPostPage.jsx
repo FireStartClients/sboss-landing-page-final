@@ -117,12 +117,14 @@ export default function BlogPostPage({ post }) {
                             <p className="text-white/80 font-body mb-6 max-w-md mx-auto">
                                 Start free with the SOP Builder and run your Business Health Scan in under 10 minutes.
                             </p>
-                            <Link
-                                href="/signup"
+                            <a
+                                href="https://app.sbos.tech"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 bg-white hover:bg-sbos-ice text-sbos-navy font-semibold px-8 py-3.5 rounded-full text-sm transition-all duration-300 hover:scale-[1.02] group"
                             >
                                 Get Started Free <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>

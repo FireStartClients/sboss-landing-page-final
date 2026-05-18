@@ -256,8 +256,10 @@ const PricingPage = () => {
                   </ul>
 
                   {/* CTA */}
-                  <button
-                    onClick={() => router.push('/signup')}
+                  <a
+                    href="https://app.sbos.tech"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold transition-all duration-300 group
                       ${tier.highlight
                         ? 'bg-sbos-royal hover:bg-sbos-electric text-white hover:scale-[1.02] hover:shadow-lg hover:shadow-sbos-electric/25'
@@ -268,7 +270,7 @@ const PricingPage = () => {
                   >
                     {tier.cta}
                     <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}
@@ -369,12 +371,14 @@ const PricingPage = () => {
               <div className="relative inline-flex mb-8">
                 <div className="absolute inset-0 rounded-full bg-white/25 animate-ping" style={{ animationDuration: '2.2s', animationDelay: '0s' }} />
                 <div className="absolute inset-0 rounded-full bg-white/15 animate-ping" style={{ animationDuration: '2.2s', animationDelay: '0.9s' }} />
-                <button
-                  onClick={() => router.push('/signup')}
+                <a
+                  href="https://app.sbos.tech"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="relative flex items-center gap-2 bg-white hover:bg-sbos-ice text-sbos-navy px-10 py-4 rounded-full text-base font-semibold transition-all duration-300 hover:scale-[1.03] hover:shadow-lg group"
                 >
                   Get Started Free <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                </button>
+                </a>
               </div>
               <div className="flex flex-wrap justify-center gap-6">
                 {['No credit card', 'Cancel anytime', 'Upgrade when ready'].map(c => (

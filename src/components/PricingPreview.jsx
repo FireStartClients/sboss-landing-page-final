@@ -67,7 +67,9 @@ const PricingPreview = () => {
                                 ))}
                             </ul>
                             <a
-                                href="/signup"
+                                href="https://app.sbos.tech"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="flex items-center justify-center gap-2 w-full py-3.5 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-[1.02] group"
                                 style={{ backgroundColor: '#EEF3FF', color: '#1E2478', border: '1px solid rgba(51,102,255,0.2)' }}
                                 onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#3366FF'; e.currentTarget.style.color = '#ffffff'; }}
@@ -112,7 +114,9 @@ const PricingPreview = () => {
                                 ))}
                             </ul>
                             <a
-                                href="/signup"
+                                href="https://app.sbos.tech"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="flex items-center justify-center gap-2 w-full py-3.5 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-[1.02] group"
                                 style={{ backgroundColor: '#2C3FB8', color: '#ffffff' }}
                                 onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#3366FF'; }}

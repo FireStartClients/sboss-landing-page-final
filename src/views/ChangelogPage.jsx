@@ -215,9 +215,9 @@ export default function ChangelogPage() {
                     <p className="text-sbos-slate font-body mb-8">
                         Free Starter plan. No credit card. Up and running in 10 minutes.
                     </p>
-                    <Link href="/signup" className="inline-flex items-center gap-2 bg-sbos-royal hover:bg-sbos-electric text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-all duration-300 hover:scale-[1.02] group">
+                    <a href="https://app.sbos.tech" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-sbos-royal hover:bg-sbos-electric text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-all duration-300 hover:scale-[1.02] group">
                         Get Started Free <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
-                    </Link>
+                    </a>
                 </div>
             </section>
 

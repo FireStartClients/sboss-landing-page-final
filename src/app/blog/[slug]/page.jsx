@@ -5,6 +5,10 @@ import { notFound } from 'next/navigation'
 
 export const revalidate = 60
 
+// Allow slugs not pre-built at deploy time to render on-demand.
+// Without this, any post added to Supabase after a build returns 404.
+export const dynamicParams = true
+
 // Pre-render known slugs at build time; new posts render on-demand
 export async function generateStaticParams() {
     const slugs = await getAllSlugs()

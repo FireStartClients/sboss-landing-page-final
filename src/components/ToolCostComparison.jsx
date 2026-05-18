@@ -183,7 +183,9 @@ const ToolCostComparison = () => {
                 </div>
 
                 <a
-                  href="/signup"
+                  href="https://app.sbos.tech"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full py-3.5 rounded-full text-sm font-semibold bg-sbos-electric hover:bg-white hover:text-sbos-navy text-white transition-all duration-300 hover:scale-[1.02] group"
                 >
                   Get Started with SBOS
